@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cyber-charcoal: #0a0a0b;
+  --color-cyber-blue: #00f2ff;
+  --color-cyber-orange: #ff4d00;
+  --color-cyber-gray: #1a1a1c;
+  --color-cyber-border: #262626;
+  
+  --font-cyber: "Inter", system-ui, sans-serif;
+}
+
+:root {
+  font-family: var(--font-cyber);
+  background-color: var(--color-cyber-charcoal);
+  color: white;
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(26, 26, 28, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--color-cyber-border);
+}
+
+.glow-blue {
+  box-shadow: 0 0 15px rgba(0, 242, 255, 0.3);
+}
+
+.glow-orange {
+  box-shadow: 0 0 15px rgba(255, 77, 0, 0.3);
+}
+
+@keyframes progress {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
+.animate-progress {
+  animation: progress 3s ease-in-out infinite;
+}
